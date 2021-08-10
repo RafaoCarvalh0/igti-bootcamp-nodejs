@@ -13,18 +13,19 @@ router.get("/mostModels", async (req, res, next) => {
 
         let countData = 0;
         let moreBrands = 0;
-        let lastDataLenght = 0;
+        let mostDataLenght = 0;
         let brands = [];
         
         for (let i = 0; i < data.length; i++) {
             countData = data[i].models.length;
             if (i != 0) {
-                lastDataLenght = data[i - 1].models.length;
-                if (countData > lastDataLenght) {
+                mostDataLenght = data[moreBrands].models.length;
+                if (countData > mostDataLenght) {
                     moreBrands = i;
                 }
             } else {
-                lastDataLenght = data[i].models.length;
+                mostDataLenght = data[i].models.length;
+                moreBrands = i;
             }
         }
         
@@ -38,9 +39,9 @@ router.get("/mostModels", async (req, res, next) => {
             }
         }
         
-        for( let i = 0 ; i < brands.length ; i++){
+        /*for( let i = 0 ; i < brands.length ; i++){
             console.log(brands[i]);
-        }
+        }*/
         
         res.send({"mostModels": brands});
 
@@ -56,18 +57,18 @@ router.get("/leastModels", async (req, res, next) => {
 
         let countData = 0;
         let leastBrands = 0;
-        let lastDataLenght = 0;
+        let mostDataLenght = 0;
         let brands = [];
         
         for (let i = 0; i < data.length; i++) {
             countData = data[i].models.length;
             if ((i != 0)) {
-                if (countData < lastDataLenght) {
-                    lastDataLenght = data[i].models.length;
+                if (countData < mostDataLenght) {
+                    mostDataLenght = data[i].models.length;
                     leastBrands = i;
                 }                  
             } else {
-                lastDataLenght = data[i].models.length;
+                mostDataLenght = data[i].models.length;
                 leastBrands = i;
             }
         }
@@ -93,8 +94,53 @@ router.get("/leastModels", async (req, res, next) => {
     }
 })
 
-router.get("/mostModels/:id", async (req, res, next) => {
+router.get("/mostModels/:number", async (req, res, next) => {
     try{
+        const data = JSON.parse(await readFile(fileName));    
+        const maximum = req.params.number;
+
+        let countData = 0;
+        let brands = [];
+
+        for (let i = 0; i < data.length; i++) {
+            countData = data[i].models.length;
+            if (countData >= maximum) {
+                brands.push({
+                "modelsQuantity":  countData,
+                "brand":data[i].brand
+                });
+            }
+        }
+
+        countData = 0;
+        moreBrands = 0;
+        mostDataLenght = 0;
+        let brandsAux = [];
+        
+        for (let i = 0; i < data.length; i++) {
+            countData = data[i].models.length;
+            if (i != 0) {
+                mostDataLenght = data[moreBrands].models.length;
+                if (countData > mostDataLenght) {
+                    moreBrands = i;
+                }
+            } else {
+                mostDataLenght = data[i].models.length;
+                moreBrands = i;
+            }
+        }
+        
+        
+        for( let i = 0 ; i < brands.length ; i++){
+            console.log(brands[i]);
+        }
+        
+        let aux = []
+        for (let i = 0; i < brands.length; i++) {
+           
+        }
+
+        res.send({"mostModels": brands});
 
 
     }catch(err){
