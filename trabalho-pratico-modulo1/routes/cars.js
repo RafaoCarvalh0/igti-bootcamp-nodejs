@@ -164,11 +164,15 @@ router.get("/listaMenosModelos/:x", async (req, res, next) => {
 
 router.post("/listaModelos", async (req, res, next) => {
     try {
-        let brandName = toLowerCase(req.body);
-
-        const data = JSON.parse(await readFile(fileName));
+        console.log(req.body);
+        let brandName = req.body;
         
+        const data = JSON.parse(await readFile(fileName));
 
+        const brands = data.models.find(
+            m => m.brand.toUpperCase() == brandName.toUpperCase()
+        )
+        res.send(brands);
 
     } catch (err) {
         next(err);
