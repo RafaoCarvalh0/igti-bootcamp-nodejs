@@ -16,7 +16,6 @@ router.get("/mostModels", async (req, res, next) => {
         let lastDataLenght = 0;
         let brands = [];
         
-        
         for (let i = 0; i < data.length; i++) {
             countData = data[i].models.length;
             if (i != 0) {
@@ -30,7 +29,6 @@ router.get("/mostModels", async (req, res, next) => {
         }
         
         const maximum = data[moreBrands].models.length;
-        console.log(maximum);
 
         for (let i = 0; i < data.length; i++) {
             countData = data[i].models.length;
@@ -39,23 +37,70 @@ router.get("/mostModels", async (req, res, next) => {
                 brands.push(data[i].brand);
             }
         }
-
-       
-        
-        //console.log(data[0].models.length);
-        //console.log(data[moreBrands].brand);
         
         for( let i = 0 ; i < brands.length ; i++){
             console.log(brands[i]);
         }
         
-        res.send(data[moreBrands].brand);
+        res.send({"mostModels": brands});
 
     } catch (err) {
-
         next(err);
     }
 })
+
+
+router.get("/leastModels", async (req, res, next) => {
+    try {
+        const data = JSON.parse(await readFile(fileName));
+
+        let countData = 0;
+        let leastBrands = 0;
+        let lastDataLenght = 0;
+        let brands = [];
+        
+        for (let i = 0; i < data.length; i++) {
+            countData = data[i].models.length;
+            if ((i != 0)) {
+                if (countData < lastDataLenght) {
+                    lastDataLenght = data[i].models.length;
+                    leastBrands = i;
+                }                  
+            } else {
+                lastDataLenght = data[i].models.length;
+                leastBrands = i;
+            }
+        }
+        
+        const minimum = data[leastBrands].models.length;
+        console.log(minimum);
+
+        for (let i = 0; i < data.length; i++) {
+            countData = data[i].models.length;
+            if (countData == minimum) {
+                brands.push(data[i].brand);
+            }
+        }
+        
+        for( let i = 0 ; i < brands.length ; i++){
+            console.log(brands[i]);
+        }
+        
+        res.send({"leastModels": brands});
+
+    } catch (err) {
+        next(err);
+    }
+})
+
+router.get("/mostModels/:id", async (req, res, next) => {
+    try{
+
+
+    }catch(err){
+        next(err);
+    }
+});
 
 router.use((err, req, res, next) => {
     console.log(err);
