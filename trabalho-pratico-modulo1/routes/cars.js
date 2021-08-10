@@ -166,7 +166,7 @@ router.get("/listaMenosModelos/:x", async (req, res, next) => {
 router.post("/listaModelos", async (req, res, next) => {
     try {
         
-        let brandName = req.body.brand;
+        let brandName = req.body.nomeMarca;
         
         const data = JSON.parse(await readFile(fileName));
 
