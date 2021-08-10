@@ -1,6 +1,7 @@
 import express from "express"
 
 const app = express();
+app.use(express.json());
 
 app.all("/testeAll", (req, res) =>{
     res.send(req.method);
@@ -26,8 +27,14 @@ app.get("/one*", (req, res) => {
 });
 
 // THE "()" IN COMBINATION WITH "?" LETS YOU OPTIONALY USE THE CHARACTERS INSIDE THE PARENTESIS
-app.post("test(ing)?", (req , res) =>{
+app.post("/test(ing)?", (req , res) =>{
+    console.log(req.body);
     res.send("test(ing)?");
+});
+
+// USING A PARAMETER ":something"
+app.get("/testParam/:id", (req, res)=>{
+    res.send(req.params.id);
 });
 
 app.listen(8080,()=>{
