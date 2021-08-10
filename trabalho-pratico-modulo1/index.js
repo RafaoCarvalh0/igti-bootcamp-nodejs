@@ -1,14 +1,12 @@
 import express from "express";
 import carsRouter from "./routes/cars.js";
 import { promises as fs } from "fs";
-import cors from "cors";
 
 const app = express();
 const { readFile, writeFile } = fs;
 app.use("/marcas", carsRouter);
 app.use(express.json());
-app.use(cors());
-app.use(express.urlencoded({ extended: true}));
+app.use(express.urlencoded({ extended: false}));
 
 global.fileName = "car-list.json"
 

@@ -4,6 +4,7 @@ import { promises as fs } from "fs";
 const { readFile } = fs;
 
 const router = express.Router();
+router.use(express.json());
 
 router.get("/maisModelos", async (req, res, next) => {
     try {
@@ -164,15 +165,21 @@ router.get("/listaMenosModelos/:x", async (req, res, next) => {
 
 router.post("/listaModelos", async (req, res, next) => {
     try {
-        console.log(req.body);
-        let brandName = req.body;
+        
+        let brandName = req.body.brand;
         
         const data = JSON.parse(await readFile(fileName));
 
-        const brands = data.models.find(
+        const brands = data.find(
             m => m.brand.toUpperCase() == brandName.toUpperCase()
         )
-        res.send(brands);
+        console.log(brands);
+        if(brands == undefined){
+            res.send([]);
+        }else{
+            res.send(brands.models);
+        }
+        
 
     } catch (err) {
         next(err);
