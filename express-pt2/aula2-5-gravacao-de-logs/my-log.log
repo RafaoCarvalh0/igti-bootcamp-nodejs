@@ -1,0 +1,4 @@
+2021-08-10T02:40:12.113Z [my-app] error: error log
+2021-08-10T02:40:12.116Z [my-app] warn: warn log
+2021-08-10T02:40:12.116Z [my-app] info: info log
+2021-08-10T02:40:12.116Z [my-app] verbose: verbose log
