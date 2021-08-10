@@ -37,6 +37,48 @@ app.get("/testParam/:id", (req, res)=>{
     res.send(req.params.id);
 });
 
+// USING PARAMETERS VIA QUERY
+// EX: 
+app.get("/testQuery", (req, res) =>{
+    res.send(req.query);
+});
+
+app.get("/testMultipleHandlers", (req, res, next) =>{
+    console.log("callback1");
+    next();
+}, (req, res)=>{
+    console.log("callback2");
+    res.end();
+});
+
+const callback1 = (req , res, next) =>{
+    console.log("callback1");
+    next();
+};
+
+const callback2 = (req , res, next) =>{
+    console.log("callback2");
+    next();
+};
+
+const callback3 = (req , res) =>{
+    console.log("callback3");
+    res.end();
+};
+
+app.get("/testMultipleHandlersArray", [callback1, callback2, callback3]);
+
+app.route("/testRoute")
+    .get((req, res)=>{
+        res.send("get");
+    })
+    .post((req, res)=>{
+        res.send("post");
+    })
+    .delete((req, res)=>{
+        res.send("delete");
+    })
+
 app.listen(8080,()=>{
     console.log("Server online!");
 });
