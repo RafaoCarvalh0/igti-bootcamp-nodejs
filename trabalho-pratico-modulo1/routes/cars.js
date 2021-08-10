@@ -8,8 +8,6 @@ const router = express.Router();
 router.get("/mostModels", async (req, res, next) => {
     try {
         const data = JSON.parse(await readFile(fileName));
-        //console.log(data.length);
-        //console.log(data[0].models.length);
 
         let countData = 0;
         let moreBrands = 0;
@@ -39,9 +37,6 @@ router.get("/mostModels", async (req, res, next) => {
             }
         }
         
-        /*for( let i = 0 ; i < brands.length ; i++){
-            console.log(brands[i]);
-        }*/
         
         res.send({"mostModels": brands});
 
@@ -106,47 +101,42 @@ router.get("/mostModels/:number", async (req, res, next) => {
             countData = data[i].models.length;
             if (countData >= maximum) {
                 brands.push({
-                "modelsQuantity":  countData,
-                "brand":data[i].brand
-                });
+                    "modelQuantity": countData,
+                    "brandName":data[i].brand   
+                    });               
             }
         }
+       
+        brands = brands.sort(sortOrder("brandName"));
+        brands = brands.sort(sortOrder("modelQuantity"));
 
-        countData = 0;
-        moreBrands = 0;
-        mostDataLenght = 0;
-        let brandsAux = [];
-        
-        for (let i = 0; i < data.length; i++) {
-            countData = data[i].models.length;
-            if (i != 0) {
-                mostDataLenght = data[moreBrands].models.length;
-                if (countData > mostDataLenght) {
-                    moreBrands = i;
-                }
-            } else {
-                mostDataLenght = data[i].models.length;
-                moreBrands = i;
-            }
-        }
-        
-        
-        for( let i = 0 ; i < brands.length ; i++){
-            console.log(brands[i]);
-        }
-        
-        let aux = []
+        let brandAux = [];
         for (let i = 0; i < brands.length; i++) {
-           
+            brandAux.push(`${brands[i].brandName} - ${brands[i].modelQuantity}`)
         }
 
-        res.send({"mostModels": brands});
+        brandAux.reverse();
+
+        res.send({brandAux});
 
 
     }catch(err){
         next(err);
     }
 });
+
+   
+function sortOrder(data) {    
+    return function(a, b) {    
+        if (a[data] > b[data]) {    
+            return 1;    
+        } else if (a[data] < b[data]) {    
+            return -1;    
+        }    
+        return 0;    
+    }    
+}    
+  
 
 router.use((err, req, res, next) => {
     console.log(err);
