@@ -1,5 +1,5 @@
 {
-  "name": "construcao-de-uma-api-pt1e2",
+  "name": "teste-cors",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "winston": "^3.3.3"
+    "express": "^4.17.1"
   },
   "type": "module"
 }
