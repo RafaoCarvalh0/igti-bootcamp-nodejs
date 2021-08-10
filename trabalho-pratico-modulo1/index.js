@@ -4,7 +4,7 @@ import { promises as fs } from "fs";
 
 const app = express();
 const { readFile, writeFile } = fs;
-app.use("/cars", carsRouter);
+app.use("/marcas", carsRouter);
 app.use(express.json());
 
 global.fileName = "car-list.json"
