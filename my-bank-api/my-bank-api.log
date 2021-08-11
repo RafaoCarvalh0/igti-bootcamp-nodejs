@@ -40,3 +40,45 @@
 2021-08-11T12:40:44.387Z [my-bank-api] info: server online
 2021-08-11T12:40:53.939Z [my-bank-api] error: PATCH /account Invalid status code: { id: 5, balance: 5 }
 2021-08-11T12:41:25.309Z [my-bank-api] info: server online
+2021-08-11T12:41:42.980Z [my-bank-api] info: server online
+2021-08-11T12:58:45.464Z [my-bank-api] info: server online
+2021-08-11T13:00:51.691Z [my-bank-api] info: server online
+2021-08-11T13:00:52.120Z [my-bank-api] info: server online
+2021-08-11T13:08:26.054Z [my-bank-api] info: server online
+2021-08-11T13:10:40.061Z [my-bank-api] info: server online
+2021-08-11T13:12:56.279Z [my-bank-api] info: server online
+2021-08-11T13:13:00.571Z [my-bank-api] info: server online
+2021-08-11T13:13:16.026Z [my-bank-api] info: server online
+2021-08-11T13:15:04.911Z [my-bank-api] info: server online
+2021-08-11T13:15:18.128Z [my-bank-api] info: server online
+2021-08-11T13:15:23.247Z [my-bank-api] info: server online
+2021-08-11T13:15:32.525Z [my-bank-api] info: server online
+2021-08-11T13:16:37.616Z [my-bank-api] info: server online
+2021-08-11T13:16:48.170Z [my-bank-api] info: server online
+2021-08-11T13:17:10.984Z [my-bank-api] info: server online
+2021-08-11T13:18:42.891Z [my-bank-api] info: server online
+2021-08-11T13:18:48.364Z [my-bank-api] info: server online
+2021-08-11T13:19:37.175Z [my-bank-api] info: server online
+2021-08-11T13:19:49.394Z [my-bank-api] info: server online
+2021-08-11T13:21:49.433Z [my-bank-api] info: server online
+2021-08-11T13:23:02.565Z [my-bank-api] info: server online
+2021-08-11T13:23:15.820Z [my-bank-api] info: server online
+2021-08-11T13:24:00.786Z [my-bank-api] info: server online
+2021-08-11T13:25:20.115Z [my-bank-api] info: server online
+2021-08-11T13:25:26.189Z [my-bank-api] info: GET /account
+2021-08-11T13:25:30.804Z [my-bank-api] error: GET /account Data not found
+2021-08-11T13:25:36.004Z [my-bank-api] info: GET /account/:id
+2021-08-11T13:25:41.101Z [my-bank-api] info: DELETE /account/:id - 5
+2021-08-11T13:25:45.236Z [my-bank-api] info: GET /account
+2021-08-11T13:25:50.487Z [my-bank-api] info: POST /account - {"id":6,"name":"teste4","balance":789}
+2021-08-11T13:25:53.487Z [my-bank-api] info: GET /account
+2021-08-11T13:26:00.497Z [my-bank-api] error: PUT /account Data not found
+2021-08-11T13:26:05.634Z [my-bank-api] info: PUT /account - {"id":6,"name":"nao era teste","balance":8550}
+2021-08-11T13:27:15.025Z [my-bank-api] info: server online
+2021-08-11T13:27:17.495Z [my-bank-api] info: PUT /account - {"id":6,"name":"nao era teste","balance":8550}
+2021-08-11T13:27:38.346Z [my-bank-api] error: PATCH /account Data not found
+2021-08-11T13:28:23.118Z [my-bank-api] info: server online
+2021-08-11T13:28:25.089Z [my-bank-api] error: PATCH /account Data not found
+2021-08-11T13:28:34.584Z [my-bank-api] info: PATCH /account/updateBalance - {"id":6,"balance":5000}
+2021-08-11T13:28:45.042Z [my-bank-api] info: GET /account
+2021-08-11T13:31:35.139Z [my-bank-api] info: server online
