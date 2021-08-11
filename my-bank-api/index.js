@@ -1,7 +1,7 @@
 import express from "express";
 import winston from "winston";
 import cors from "cors";
-import accountsRouter from "./routes/accounts.js";
+import accountsRouter from "./routes/account.routes.js";
 import { promises as fs } from "fs";
 
 const { readFile, writeFile } = fs;

@@ -4,3 +4,39 @@
 2021-08-10T14:11:39.106Z [my-bank-api] info: GET /account
 2021-08-10T14:13:03.155Z [my-bank-api] info: server online
 2021-08-10T14:13:07.610Z [my-bank-api] info: GET /account
+2021-08-11T01:22:35.215Z [my-bank-api] info: server online
+2021-08-11T01:23:33.804Z [my-bank-api] info: GET /account
+2021-08-11T01:24:04.155Z [my-bank-api] info: server online
+2021-08-11T01:25:50.199Z [my-bank-api] info: server online
+2021-08-11T01:26:00.330Z [my-bank-api] info: server online
+2021-08-11T01:26:31.848Z [my-bank-api] info: server online
+2021-08-11T01:26:44.435Z [my-bank-api] info: server online
+2021-08-11T01:28:19.921Z [my-bank-api] info: server online
+2021-08-11T01:28:30.531Z [my-bank-api] info: server online
+2021-08-11T01:28:53.601Z [my-bank-api] info: server online
+2021-08-11T01:29:12.987Z [my-bank-api] info: server online
+2021-08-11T12:33:34.093Z [my-bank-api] info: server online
+2021-08-11T12:33:54.846Z [my-bank-api] info: GET /account
+2021-08-11T12:33:57.607Z [my-bank-api] info: GET /account/:id
+2021-08-11T12:34:02.219Z [my-bank-api] error: DELETE /account re is not defined
+2021-08-11T12:34:20.469Z [my-bank-api] info: server online
+2021-08-11T12:34:28.392Z [my-bank-api] info: server online
+2021-08-11T12:34:32.146Z [my-bank-api] info: DELETE /account/:id - 4
+2021-08-11T12:34:36.941Z [my-bank-api] info: GET /account
+2021-08-11T12:34:52.330Z [my-bank-api] info: POST /account - {"id":5,"name":"teste4","balance":789}
+2021-08-11T12:34:56.719Z [my-bank-api] info: GET /account
+2021-08-11T12:35:18.260Z [my-bank-api] info: PUT /account - {"id":5,"name":"nao era teste","balance":8550}
+2021-08-11T12:35:22.051Z [my-bank-api] info: GET /account
+2021-08-11T12:35:42.338Z [my-bank-api] error: PATCH /account AccountService.updateBalance is not a function
+2021-08-11T12:37:02.288Z [my-bank-api] info: server online
+2021-08-11T12:37:04.452Z [my-bank-api] error: PATCH /account Invalid status code: 5
+2021-08-11T12:37:16.703Z [my-bank-api] info: GET /account
+2021-08-11T12:38:28.033Z [my-bank-api] info: server online
+2021-08-11T12:38:31.413Z [my-bank-api] info: GET /account
+2021-08-11T12:38:43.127Z [my-bank-api] error: PATCH /account Invalid status code: 5
+2021-08-11T12:39:59.931Z [my-bank-api] info: server online
+2021-08-11T12:40:03.126Z [my-bank-api] info: PATCH /account/updateBalance - {"id":5,"balance":5}
+2021-08-11T12:40:34.852Z [my-bank-api] info: server online
+2021-08-11T12:40:44.387Z [my-bank-api] info: server online
+2021-08-11T12:40:53.939Z [my-bank-api] error: PATCH /account Invalid status code: { id: 5, balance: 5 }
+2021-08-11T12:41:25.309Z [my-bank-api] info: server online
