@@ -1,6 +1,6 @@
 import { GraphQLInputObjectType, GraphQLString, GraphQLInt, GraphQLFloat } from "graphql";
 
-const AccountInput = new GraphQLObjectType({
+const AccountInput = new GraphQLInputObjectType({
     name: "AccountInput",
     fields: () => ({
         id: {

@@ -6,14 +6,14 @@ async function todosDados() {
     return data;
 }
 
-
-
 async function maisModelos(){
     const data = await todosDados();
     let countData = 0;
     let moreBrands = 0;
     let mostDataLenght = 0;
     let brands = [];
+
+    setTim
 
     for (let i = 0; i < data.length; i++) {
         countData = data[i].models.length;
@@ -141,7 +141,6 @@ async function listaModelos(x){
 }
 
 async function sortOrder(data) {
-    
     return function (a, b) {
         if (a[data] > b[data]) {
             return 1;
@@ -159,5 +158,4 @@ export default{
     listaMaisModelos,
     listaMenosModelos,
     listaModelos
-    
 }
