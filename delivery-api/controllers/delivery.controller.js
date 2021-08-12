@@ -42,26 +42,6 @@ async function atualizarStatus(req, res, next){
     }    
 }
 
-/*
-{
-  "nextId": 501,
-  "pedidos": [
-    {
-      "id": 1,
-      "cliente": "Lavínia Dâmaso",
-      "produto": "Pizza Muçarela",
-      "valor": 26,
-      "entregue": true,
-      "timestamp": "2021-05-02T19:48:09.765Z"
-    },
-    {
-*/
-
-/*
-        {	
-			"id": 1,
-        }
-        */
 async function excluirPedido(req, res, next){
     try{
         await DeliveryService.excluirPedido(req.body.id);
@@ -82,8 +62,29 @@ async function consultarPedido(req, res, next){
     }
 }
 
-async function consultaVTCliente(){
-    
+    /*
+{
+  "nextId": 501,
+  "pedidos": [
+    {
+      "id": 1,
+      "cliente": "Lavínia Dâmaso",
+      "produto": "Pizza Muçarela",
+      "valor": 26,
+      "entregue": true,
+      "timestamp": "2021-05-02T19:48:09.765Z"
+    },
+    {
+*/
+
+async function consultaVTCliente(req, res, next){
+    try{
+        
+        res.send(await DeliveryService.consultaVTCliente(req.params.cliente));
+        
+    }catch(err){
+        next(err);
+    }
 }
 
 async function consultaVTProduto(){

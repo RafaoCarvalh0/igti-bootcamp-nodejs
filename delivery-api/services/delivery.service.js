@@ -22,8 +22,8 @@ async function consultarPedido(pedido){
     return await DeliveryRepository.consultarPedido(pedido);
 }
 
-async function consultaVTCliente(){
-    
+async function consultaVTCliente(cliente){
+    return await DeliveryRepository.consultaVTCliente(cliente);
 }
 
 async function consultaVTProduto(){

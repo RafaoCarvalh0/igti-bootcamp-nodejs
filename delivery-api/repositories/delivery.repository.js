@@ -47,7 +47,6 @@ async function atualizarPedido(pedido){
 async function excluirPedido(data){
 
     const pedido =  JSON.parse(await readFile(fileName));
-    //pedidosAux = data.pedidos
     pedido.pedidos = pedido.pedidos.filter(
         pd => pd.id !== parseInt(data)
     );
@@ -72,8 +71,28 @@ async function consultarPedido(data){
     
 }
 
-async function consultaVTCliente(){
+async function consultaVTCliente(data){
+    const pedidos = await carregarPedidos();
+    //pedidos = data.pedidos
+    let pedidosCliente = pedidos.filter(
+        p => p.cliente === data && p.entregue === true
+    );
     
+    if(pedidosCliente){
+        let valorTotal = 0;
+        for (let i in pedidosCliente){
+            valorTotal = valorTotal + pedidosCliente[i].valor
+        }
+
+       return pedidosCliente = {
+            "nomeCliente": data,
+            "valorTotalGasto": valorTotal
+        }
+
+    }else{
+        throw new Error("Cliente Nao encontrado");
+    }
+
 }
 
 async function consultaVTProduto(){
