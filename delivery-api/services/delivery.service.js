@@ -27,7 +27,7 @@ async function consultaVTCP(data){
 }
 
 async function maisVendidos(){
-    
+    return await DeliveryRepository.maisVendidos();
 }
 
 export default{

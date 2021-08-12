@@ -70,8 +70,12 @@ async function consultaVTCP(req, res, next){
     }
 }
 
-async function maisVendidos(){
-    
+async function maisVendidos(req, res, next){
+    try{
+        res.send(await DeliveryService.maisVendidos());
+    }catch(err){
+        next(err);
+    }
 }
 
 export default{

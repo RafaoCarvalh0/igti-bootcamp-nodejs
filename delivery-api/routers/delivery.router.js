@@ -11,6 +11,7 @@ router.get("/consultarPedido/:id", DeliveryController.consultarPedido);
 router.delete("/excluirPedido", DeliveryController.excluirPedido);
 router.get("/valorTotalCliente/:data", DeliveryController.consultaVTCP);
 router.get("/valorTotalProduto/:data", DeliveryController.consultaVTCP);
+router.get("/maisVendidos", DeliveryController.maisVendidos);
 
 router.use((err, req, res, next) => {
     console.log(err);

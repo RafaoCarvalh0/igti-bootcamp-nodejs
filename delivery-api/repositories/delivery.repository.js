@@ -77,7 +77,7 @@ async function consultaVTCP(data) {
     let pedidosCP = pedidos.filter(
         p => (p.cliente === data || p.produto === data) && p.entregue === true
     );
-    
+
     if (pedidosCP[0].cliente == data) {
         let valorTotal = 0;
         for (let i in pedidosCP) {
@@ -93,7 +93,7 @@ async function consultaVTCP(data) {
         pedidosCP = pedidos.filter(
             p => p.produto === data && p.entregue === true
         );
-      
+
         if (pedidosCP) {
             let valorTotal = 0;
             for (let i in pedidosCP) {
@@ -107,11 +107,55 @@ async function consultaVTCP(data) {
         }
     }
     throw new Error("Dado Nao encontrado");
-
 }
 
-
 async function maisVendidos() {
+    let pedidos = await carregarPedidos();
+    let todosSabores = [];
+    let sabores = [];
+
+
+    pedidos = pedidos.filter(
+        p => p.entregue === true
+    )
+
+    for (const x in pedidos) {
+        todosSabores.push(pedidos[x].produto);
+    }
+    sabores.push(todosSabores[0]);
+
+
+    for (const x in todosSabores) {
+        const index = parseInt(x);
+        sabores.push(todosSabores[index + 1])
+        for (let y = sabores.length - 1; y > 0; y--) {
+            if (sabores[sabores.length - 1] === sabores[y - 1]) {
+                sabores.pop();
+                break;
+            }
+        }
+    }
+    sabores.pop();
+    console.log(sabores);
+    todosSabores = [];
+
+    for (const x in sabores) {
+        const index = parseInt(x);
+        todosSabores.push(await consultaVTCP(sabores[index]))
+    }
+
+    todosSabores = todosSabores.sort(await sortOrder("nome"));
+    todosSabores = todosSabores.sort(await sortOrder("valorTotalGasto"));
+
+    sabores = [];
+    for (const x in todosSabores) {
+        const index = parseInt(x);
+        sabores.push(`${todosSabores[index].nome} - ${todosSabores[index].valorTotalGasto}`);
+    }
+
+    sabores.reverse();
+
+    return sabores;
 
 }
 
