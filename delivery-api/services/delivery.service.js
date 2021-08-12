@@ -22,12 +22,8 @@ async function consultarPedido(pedido){
     return await DeliveryRepository.consultarPedido(pedido);
 }
 
-async function consultaVTCliente(cliente){
-    return await DeliveryRepository.consultaVTCliente(cliente);
-}
-
-async function consultaVTProduto(){
-    
+async function consultaVTCP(data){
+    return await DeliveryRepository.consultaVTCP(data);
 }
 
 async function maisVendidos(){
@@ -40,7 +36,6 @@ export default{
     atualizarStatus,
     excluirPedido,
     consultarPedido,
-    consultaVTCliente,
-    consultaVTProduto,
+    consultaVTCP,
     maisVendidos
 }

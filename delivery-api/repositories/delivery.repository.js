@@ -1,12 +1,12 @@
 import { promises as fs } from "fs";
 const { readFile, writeFile } = fs;
 
-async function carregarPedidos(){
+async function carregarPedidos() {
     const data = JSON.parse(await readFile(fileName));
     return data.pedidos;
 };
 
-async function criarPedido(pedido){
+async function criarPedido(pedido) {
     const data = await carregarPedidos();
     pedido = {
         id: data.nextId++,
@@ -24,13 +24,13 @@ async function criarPedido(pedido){
     return pedido;
 }
 
-async function atualizarPedido(pedido){
+async function atualizarPedido(pedido) {
     const data = JSON.parse(await readFile(fileName));
     const index = data.pedidos.findIndex(
         a => a.id === pedido.id
     );
 
-    if(index === -1){
+    if (index === -1) {
         throw new Error("Pedido nao encontrado");
     }
 
@@ -41,66 +41,78 @@ async function atualizarPedido(pedido){
 
     await writeFile(fileName, JSON.stringify(data));
     return data.pedidos[index];
-    
+
 }
 
-async function excluirPedido(data){
+async function excluirPedido(data) {
 
-    const pedido =  JSON.parse(await readFile(fileName));
+    const pedido = JSON.parse(await readFile(fileName));
     pedido.pedidos = pedido.pedidos.filter(
         pd => pd.id !== parseInt(data)
     );
-    if(pedido){
+    if (pedido) {
         await writeFile(fileName, JSON.stringify(pedido));
-    }else{
+    } else {
         throw new Error("Pedido nao encontrado");
     }
 }
 
-async function consultarPedido(data){
+async function consultarPedido(data) {
     const pedidos = await carregarPedidos();
     const pedido = pedidos.find(
         p => p.id == data
     )
 
-    if(pedido){
+    if (pedido) {
         return pedido;
-    }else{
+    } else {
         throw new Error("Pedido nao encontrado");
     }
-    
+
 }
 
-async function consultaVTCliente(data){
+async function consultaVTCP(data) {
     const pedidos = await carregarPedidos();
     //pedidos = data.pedidos
-    let pedidosCliente = pedidos.filter(
-        p => p.cliente === data && p.entregue === true
+    let pedidosCP = pedidos.filter(
+        p => (p.cliente === data || p.produto === data) && p.entregue === true
     );
     
-    if(pedidosCliente){
+    if (pedidosCP[0].cliente == data) {
         let valorTotal = 0;
-        for (let i in pedidosCliente){
-            valorTotal = valorTotal + pedidosCliente[i].valor
+        for (let i in pedidosCP) {
+            valorTotal = valorTotal + pedidosCP[i].valor
         }
 
-       return pedidosCliente = {
-            "nomeCliente": data,
+        return pedidosCP = {
+            "nome": data,
             "valorTotalGasto": valorTotal
         }
 
-    }else{
-        throw new Error("Cliente Nao encontrado");
+    } else if (pedidosCP[0].produto == data) {
+        pedidosCP = pedidos.filter(
+            p => p.produto === data && p.entregue === true
+        );
+      
+        if (pedidosCP) {
+            let valorTotal = 0;
+            for (let i in pedidosCP) {
+                valorTotal = valorTotal + pedidosCP[i].valor
+            }
+
+            return pedidosCP = {
+                "nome": data,
+                "valorTotalGasto": valorTotal
+            }
+        }
     }
+    throw new Error("Dado Nao encontrado");
 
 }
 
-async function consultaVTProduto(){
-    
-}
 
-async function maisVendidos(){
-    
+async function maisVendidos() {
+
 }
 
 async function sortOrder(data) {
@@ -114,13 +126,12 @@ async function sortOrder(data) {
     }
 }
 
-export default{
+export default {
     criarPedido,
     atualizarPedido,
     excluirPedido,
     consultarPedido,
-    consultaVTCliente,
-    consultaVTProduto,
+    consultaVTCP,
     maisVendidos,
     carregarPedidos
 }
