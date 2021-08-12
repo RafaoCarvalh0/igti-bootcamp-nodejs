@@ -7,7 +7,8 @@ async function carregarPedidos() {
 };
 
 async function criarPedido(pedido) {
-    const data = await carregarPedidos();
+    const data = JSON.parse(await readFile(fileName));
+    
     pedido = {
         id: data.nextId++,
         cliente: pedido.cliente,
