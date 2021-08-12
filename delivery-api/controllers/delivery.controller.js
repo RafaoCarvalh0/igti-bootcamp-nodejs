@@ -1,26 +1,6 @@
 import DeliveryService from "../services/delivery.service.js"
 
-/*
-{
-  "nextId": 501,
-  "pedidos": [
-    {
-      "id": 1,
-      "cliente": "Lavínia Dâmaso",
-      "produto": "Pizza Muçarela",
-      "valor": 26,
-      "entregue": true,
-      "timestamp": "2021-05-02T19:48:09.765Z"
-    },
-    {
-      "id": 2,
-      "cliente": "Tália Simas",
-      "produto": "Pizza Napolitana",
-      "valor": 28,
-      "entregue": true,
-      "timestamp": "2021-05-02T19:48:09.765Z"
-    },
-*/
+
 
 async function criarPedido(req, res, next){
     try{
@@ -35,20 +15,69 @@ async function criarPedido(req, res, next){
     }
 }
 
-async function atualizarPedido(){
-    
+async function atualizarPedido(req, res, next){
+    try{
+        const pedido = req.body;
+        if (!pedido.id || !pedido.cliente || !pedido.produto || pedido.valor == null) {
+            throw new Error("ID, Cliente, produto ou valor sao invalidos");
+        }
+        res.send(await DeliveryService.atualizarPedido(pedido));
+    }catch(err){
+        next(err);
+    }   
 }
 
-async function atualizarStatus(){
-    
+async function atualizarStatus(req, res, next){
+    try{
+        const pedido = req.body;
+        /*
+        {	
+			"id": 1,
+			"cliente": "teste",
+            "produto": "Pizza tilapiosa",
+            "valor": 3264,
+			"entregue": false
+        }
+        */
+
+        if (!pedido.id || pedido.entregue == undefined) {
+            throw new Error("Id ou status de entrega incorretos");
+        }
+        
+        res.send(await DeliveryService.atualizarStatus(pedido));
+
+    }catch(err){
+        next(err);
+    }    
 }
 
+/*
+{
+  "nextId": 501,
+  "pedidos": [
+    {
+      "id": 1,
+      "cliente": "Lavínia Dâmaso",
+      "produto": "Pizza Muçarela",
+      "valor": 26,
+      "entregue": true,
+      "timestamp": "2021-05-02T19:48:09.765Z"
+    },
+    {
+*/
 async function excluirPedido(){
     
 }
 
-async function consultarPedido(){
-    
+async function consultarPedido(req, res, next){
+    try{
+        if (!req.body.id){
+            throw new Error("Pedido nao encontrado");
+        }
+        return await DeliveryService.consultarPedido(req.body.id);
+    }catch(err){
+        next(err);
+    }
 }
 
 async function consultaVTCliente(){

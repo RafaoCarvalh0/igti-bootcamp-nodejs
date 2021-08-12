@@ -1,9 +1,13 @@
 import { promises as fs } from "fs";
 const { readFile, writeFile } = fs;
 
-async function criarPedido(pedido){
+async function carregarPedidos(){
     const data = JSON.parse(await readFile(fileName))
+    return data.pedidos;
+};
 
+async function criarPedido(pedido){
+    const data = await carregarPedidos();
     pedido = {
         id: data.nextId++,
         cliente: pedido.cliente,
@@ -14,7 +18,7 @@ async function criarPedido(pedido){
     }
 
     data.pedidos.push(pedido);
-    
+
     await writeFile(fileName, JSON.stringify(data, null, 2));
 
     return pedido;
@@ -35,11 +39,23 @@ async function criarPedido(pedido){
       {
 */
 
-async function atualizarPedido(){
-    
-}
+async function atualizarPedido(pedido){
+    const data = JSON.parse(await readFile(fileName));
+    const index = data.pedidos.findIndex(
+        a => a.id === pedido.id
+    );
 
-async function atualizarStatus(){
+    if(index === -1){
+        throw new Error("Pedido nao encontrado");
+    }
+
+    data.pedidos[index].cliente = pedido.cliente;
+    data.pedidos[index].produto = pedido.produto;
+    data.pedidos[index].valor = pedido.valor;
+    data.pedidos[index].entregue = pedido.entregue;
+
+    await writeFile(fileName, JSON.stringify(data));
+    return data.pedidos[index];
     
 }
 
@@ -47,7 +63,17 @@ async function excluirPedido(){
     
 }
 
-async function consultarPedido(){
+async function consultarPedido(data){
+    const pedidos = await carregarPedidos();
+    const pedido = pedidos.find(
+        p => p.id === data
+    )
+
+    if(pedido){
+        return pedido;
+    }else{
+        throw new Error("Pedido nao encontrado");
+    }
     
 }
 
@@ -63,13 +89,24 @@ async function maisVendidos(){
     
 }
 
+async function sortOrder(data) {
+    return function (a, b) {
+        if (a[data] > b[data]) {
+            return 1;
+        } else if (a[data] < b[data]) {
+            return -1;
+        }
+        return 0;
+    }
+}
+
 export default{
     criarPedido,
     atualizarPedido,
-    atualizarStatus,
     excluirPedido,
     consultarPedido,
     consultaVTCliente,
     consultaVTProduto,
-    maisVendidos
+    maisVendidos,
+    carregarPedidos
 }
