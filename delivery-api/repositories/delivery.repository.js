@@ -2,7 +2,7 @@ import { promises as fs } from "fs";
 const { readFile, writeFile } = fs;
 
 async function carregarPedidos(){
-    const data = JSON.parse(await readFile(fileName))
+    const data = JSON.parse(await readFile(fileName));
     return data.pedidos;
 };
 
@@ -24,21 +24,6 @@ async function criarPedido(pedido){
     return pedido;
 }
 
-/*
-{
-    "nextId": 501,
-    "pedidos": [
-      {
-        "id": 1,
-        "cliente": "Lavínia Dâmaso",
-        "produto": "Pizza Muçarela",
-        "valor": 26,
-        "entregue": true,
-        "timestamp": "2021-05-02T19:48:09.765Z"
-      },
-      {
-*/
-
 async function atualizarPedido(pedido){
     const data = JSON.parse(await readFile(fileName));
     const index = data.pedidos.findIndex(
@@ -59,14 +44,24 @@ async function atualizarPedido(pedido){
     
 }
 
-async function excluirPedido(){
-    
+async function excluirPedido(data){
+
+    const pedido =  JSON.parse(await readFile(fileName));
+    //pedidosAux = data.pedidos
+    pedido.pedidos = pedido.pedidos.filter(
+        pd => pd.id !== parseInt(data)
+    );
+    if(pedido){
+        await writeFile(fileName, JSON.stringify(pedido));
+    }else{
+        throw new Error("Pedido nao encontrado");
+    }
 }
 
 async function consultarPedido(data){
     const pedidos = await carregarPedidos();
     const pedido = pedidos.find(
-        p => p.id === data
+        p => p.id == data
     )
 
     if(pedido){

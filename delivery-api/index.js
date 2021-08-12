@@ -4,15 +4,15 @@ import { promises as fs } from "fs";
 
 const { readFile } = fs;
 
+global.fileName = "pedidos.json"
+
 const app = express();
 app.use(express.json());
 app.use("/delivery", deliveryRouter);
 
-global.fileName = "pedidos.json"
-
 app.listen(8080, async ()=>{
     try{
-        await fs.readFile(fileName);
+        await readFile(fileName);
         console.log("server online");
     }catch(err){
         console.log(err);

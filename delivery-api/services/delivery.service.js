@@ -14,8 +14,8 @@ async function atualizarStatus(pedido){
     return await DeliveryRepository.atualizarPedido(pd);
 }
 
-async function excluirPedido(){
-    
+async function excluirPedido(pedido){
+    return await DeliveryRepository.excluirPedido(pedido);
 }
 
 async function consultarPedido(pedido){

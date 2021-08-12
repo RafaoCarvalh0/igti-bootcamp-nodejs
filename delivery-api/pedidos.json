@@ -3,9 +3,9 @@
   "pedidos": [
     {
       "id": 1,
-      "cliente": "teste",
-      "produto": "Pizza tilapiosa",
-      "valor": 3264,
+      "cliente": "Lavínia Dâmaso",
+      "produto": "Pizza Muçarela",
+      "valor": 26,
       "entregue": true,
       "timestamp": "2021-05-02T19:48:09.765Z"
     },

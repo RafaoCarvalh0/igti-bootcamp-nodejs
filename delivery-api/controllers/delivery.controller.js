@@ -30,15 +30,6 @@ async function atualizarPedido(req, res, next){
 async function atualizarStatus(req, res, next){
     try{
         const pedido = req.body;
-        /*
-        {	
-			"id": 1,
-			"cliente": "teste",
-            "produto": "Pizza tilapiosa",
-            "valor": 3264,
-			"entregue": false
-        }
-        */
 
         if (!pedido.id || pedido.entregue == undefined) {
             throw new Error("Id ou status de entrega incorretos");
@@ -65,16 +56,27 @@ async function atualizarStatus(req, res, next){
     },
     {
 */
-async function excluirPedido(){
-    
+
+/*
+        {	
+			"id": 1,
+        }
+        */
+async function excluirPedido(req, res, next){
+    try{
+        await DeliveryService.excluirPedido(req.body.id);
+        res.end();
+    }catch(err){
+        next(err);
+    }
 }
 
 async function consultarPedido(req, res, next){
     try{
-        if (!req.body.id){
+        if (!req.params.id){
             throw new Error("Pedido nao encontrado");
         }
-        return await DeliveryService.consultarPedido(req.body.id);
+        res.send(await DeliveryService.consultarPedido(req.params.id));
     }catch(err){
         next(err);
     }

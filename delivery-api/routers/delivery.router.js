@@ -6,8 +6,9 @@ router.use(express.json());
 
 router.post("/criarPedido", DeliveryController.criarPedido);
 router.put("/atualizarPedido", DeliveryController.atualizarPedido);
-router.patch("/atualizarStatus/", DeliveryController.atualizarStatus);
+router.patch("/atualizarStatus", DeliveryController.atualizarStatus);
 router.get("/consultarPedido/:id", DeliveryController.consultarPedido);
+router.delete("/excluirPedido", DeliveryController.excluirPedido);
 
 router.use((err, req, res, next) => {
     console.log(err);
