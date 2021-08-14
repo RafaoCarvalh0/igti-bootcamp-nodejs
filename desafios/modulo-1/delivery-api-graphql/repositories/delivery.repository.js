@@ -86,8 +86,8 @@ async function consultaVTCP(data) {
         }
 
         return pedidosCP = {
-            "nome": data,
-            "valorTotalGasto": valorTotal
+            "cliente": data,
+            "valor": valorTotal
         }
 
     } else if (pedidosCP[0].produto == data) {
@@ -102,8 +102,8 @@ async function consultaVTCP(data) {
             }
 
             return pedidosCP = {
-                "nome": data,
-                "valorTotalGasto": valorTotal
+                "produto": data,
+                "valor": valorTotal
             }
         }
     }
@@ -137,26 +137,30 @@ async function maisVendidos() {
         }
     }
     sabores.pop();
-    console.log(sabores);
+    
     todosSabores = [];
 
     for (const x in sabores) {
         const index = parseInt(x);
         todosSabores.push(await consultaVTCP(sabores[index]))
     }
-
-    todosSabores = todosSabores.sort(await sortOrder("nome"));
-    todosSabores = todosSabores.sort(await sortOrder("valorTotalGasto"));
-
+    todosSabores = todosSabores.sort(await sortOrder("produto"));
+    todosSabores = todosSabores.sort(await sortOrder("valor"));
+    
     sabores = [];
+    console.log(todosSabores)
+
     for (const x in todosSabores) {
+        
         const index = parseInt(x);
-        sabores.push(`${todosSabores[index].nome} - ${todosSabores[index].valorTotalGasto}`);
+        sabores.push({"produto": `${todosSabores[index].produto} - ${todosSabores[index].valor}`});
+        
     }
-
+    
     sabores.reverse();
+    
+    return  sabores;
 
-    return sabores;
 
 }
 

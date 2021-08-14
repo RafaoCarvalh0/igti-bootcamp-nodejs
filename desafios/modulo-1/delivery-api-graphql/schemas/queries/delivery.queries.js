@@ -1,34 +1,50 @@
-import { GraphQLList, GraphQLInt } from "graphql";
+import { GraphQLList, GraphQLInt, GraphQLString, GraphQLFloat } from "graphql";
+import DeliveryResolver from "../resolvers/delivery.resolver.js";
 import Pedido from "../types/Pedido.js";
-import InputPedido from "../types/InputPedido.js";
-import DeliveryResolver from "../resolvers/account.resolver.js";
 
-const deliveryQueries={
-    pedidos:{
-        type: new GraphQLList(InputPedido),
-        resolve: ()=> DeliveryResolver.pedidos()
+
+const deliveryQueries = {
+    pedidos: {
+        type: new GraphQLList(Pedido),
+        resolve: () => DeliveryResolver.pedidos()
+    },
+    maisVendidos:{
+        type: new GraphQLList(Pedido),
+        resolve: () => DeliveryResolver.maisVendidos()
     },
     consultarPedido: {
         type: Pedido,
-        args:{
-            id:{
+        args: {
+            id: {
                 name: "id",
                 type: GraphQLInt
             }
         },
-        resolve: (_, args)=> DeliveryResolver.consultarPedido(args.id)
+        resolve: (_, args) => DeliveryResolver.consultarPedido(args.id)
+    },
+    valorTotalCliente: {
+        type: Pedido,
+        args: {
+            cliente: {
+                name: "cliente",
+                type: GraphQLString
+            }
+        },
+        resolve: (_, args) => DeliveryResolver.consultaVTCP(args.cliente)
+    },
+    valorTotalProduto: {
+        type: Pedido,
+        args:{
+            produto:{
+                name: "produto",
+                type: GraphQLString
+            }
+        },
+        resolve: (_, args) => DeliveryResolver.consultaVTCP(args.produto)
+
     }
+
 };
 
 export default deliveryQueries;
 
-/*
-router.post("/criarPedido", DeliveryController.criarPedido);
-router.put("/atualizarPedido", DeliveryController.atualizarPedido);
-router.patch("/atualizarStatus", DeliveryController.atualizarStatus);
-router.get("/consultarPedido/:id", DeliveryController.consultarPedido);
-router.delete("/excluirPedido", DeliveryController.excluirPedido);
-router.get("/valorTotalCliente/:data", DeliveryController.consultaVTCP);
-router.get("/valorTotalProduto/:data", DeliveryController.consultaVTCP);
-router.get("/maisVendidos", DeliveryController.maisVendidos);
-*/

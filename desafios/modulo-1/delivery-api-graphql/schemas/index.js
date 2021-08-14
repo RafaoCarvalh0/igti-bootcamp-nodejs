@@ -1,4 +1,4 @@
-import { GraphQLSchema, GraphQLObjectType }  from "graphql";
+import { GraphQLSchema, GraphQLObjectType } from "graphql";
 import DeliveryQuery from "./queries/delivery.queries.js";
 import DeliveryMutation from "./mutations/delivery.mutation.js"
 
@@ -6,13 +6,13 @@ const Schema = new GraphQLSchema({
     types: null,
     query: new GraphQLObjectType({
         name: "RootQueryType",
-        fields:{
+        fields: {
             ...DeliveryQuery
         }
     }),
-    mutations: new GraphQLObjectType({
+    mutation: new GraphQLObjectType({
         name: "RootMutation",
-        fields:{
+        fields: {
             ...DeliveryMutation
         }
     })

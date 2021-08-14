@@ -1,7 +1,7 @@
 import { GraphQLInputObjectType, GraphQLInt, GraphQLString, GraphQLFloat, GraphQLBoolean } from "graphql";
 
 const InputPedido = new GraphQLInputObjectType({
-    name: "ConsultarPedido",
+    name: "InputPedido",
     fields: () => ({
         id: {
             type: GraphQLInt

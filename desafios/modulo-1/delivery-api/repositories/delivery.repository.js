@@ -151,11 +151,11 @@ async function maisVendidos() {
     sabores = [];
     for (const x in todosSabores) {
         const index = parseInt(x);
-        sabores.push(`${todosSabores[index].nome} - ${todosSabores[index].valorTotalGasto}`);
+        sabores.push({"sabor": `${todosSabores[index].nome} - ${todosSabores[index].valorTotalGasto}`});
     }
 
     sabores.reverse();
-
+    
     return sabores;
 
 }

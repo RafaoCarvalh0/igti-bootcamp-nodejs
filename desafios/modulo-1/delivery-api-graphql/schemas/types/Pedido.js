@@ -2,7 +2,7 @@ import { GraphQLObjectType, GraphQLInt, GraphQLString, GraphQLFloat, GraphQLBool
 
 const Pedido = new GraphQLObjectType({
     name: "Pedido",
-    fields: ()=> ({
+    fields: () => ({
         id: {
             type: GraphQLInt
         },
@@ -12,13 +12,13 @@ const Pedido = new GraphQLObjectType({
         produto: {
             type: GraphQLString
         },
-        valor:{
+        valor: {
             type: GraphQLFloat
         },
-        entregue:{
+        entregue: {
             type: GraphQLBoolean
         },
-        timestamp:{
+        timestamp: {
             type: GraphQLString
         }
     })

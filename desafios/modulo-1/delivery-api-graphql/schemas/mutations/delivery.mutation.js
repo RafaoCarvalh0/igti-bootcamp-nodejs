@@ -1,6 +1,6 @@
 import Pedido from "../types/Pedido.js";
 import InputPedido from "../types/InputPedido.js";
-import DeliveryResolver from "../resolvers/account.resolver.js";
+import DeliveryResolver from "../resolvers/delivery.resolver.js";
 import { GraphQLBoolean, GraphQLInt } from "graphql";
 
 const deliveryMutation = {
@@ -12,26 +12,22 @@ const deliveryMutation = {
                 type: InputPedido
             }
         },
-        resolve(_, args){
-            return DeliveryResolver.criarPedido(args.pedido);
-        } 
-
-    },
-    atualizarPedido:{
-        type: Pedido,
-        args: {
-            pedido:{
-                name: "pedido",
-                tipo: InputPedido
-            },
-            resolve(_, args){
-                return DeliveryResolver.atualizarPedido(args.pedido);
-            }
-            
+        resolve(_, args) {
+            return DeliveryResolver.criarPedido(args);
         }
 
     },
-    atualizarStatus:{
+    atualizarPedido: {
+        type: Pedido,
+        args: {
+            pedido: {
+                name: "id",
+                type: InputPedido
+            }
+        },
+        resolve(_, args) {
+            return DeliveryResolver.atualizarPedido(args.id);
+        }
 
     },
     excluirPedido: {
@@ -42,12 +38,28 @@ const deliveryMutation = {
                 type: GraphQLInt
             }
         },
-        resolve(_, args){
+        resolve(_, args) {
             DeliveryResolver.excluirPedido(args.id)
         }
 
     },
+    atualizarStatus: {
+        type: Pedido,
+        args:{
+            id:{
+                name: "id",
+                type: InputPedido
+            }
+        },
+        resolve(_, args){
+            DeliveryResolver.atualizarStatus(args.id)
+        }
+    }
 
 }
 
 export default deliveryMutation;
+
+/*
+router.patch("/atualizarStatus", DeliveryController.atualizarStatus);
+*/

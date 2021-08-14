@@ -10,7 +10,6 @@ global.fileName = "pedidos.json"
 
 const app = express();
 app.use(express.json());
-//app.use("/delivery", deliveryRouter);
 
 app.use("/graphql", graphqlHTTP({
     schema: Schema,
