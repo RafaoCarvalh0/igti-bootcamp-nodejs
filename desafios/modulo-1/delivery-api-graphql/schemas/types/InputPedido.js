@@ -24,4 +24,6 @@ const InputPedido = new GraphQLInputObjectType({
     })
 });
 
-export default InputPedido;
+
+
+export default InputPedido

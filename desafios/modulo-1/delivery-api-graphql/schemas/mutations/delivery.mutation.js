@@ -13,7 +13,7 @@ const deliveryMutation = {
             }
         },
         resolve(_, args) {
-            return DeliveryResolver.criarPedido(args);
+            return DeliveryResolver.criarPedido(args.pedido);
         }
 
     },
@@ -21,12 +21,12 @@ const deliveryMutation = {
         type: Pedido,
         args: {
             pedido: {
-                name: "id",
+                name: "pedido",
                 type: InputPedido
             }
         },
         resolve(_, args) {
-            return DeliveryResolver.atualizarPedido(args.id);
+            return DeliveryResolver.atualizarPedido(args.pedido);
         }
 
     },
@@ -45,14 +45,14 @@ const deliveryMutation = {
     },
     atualizarStatus: {
         type: Pedido,
-        args:{
-            id:{
+        args: {
+            id: {
                 name: "id",
                 type: InputPedido
             }
         },
-        resolve(_, args){
-            DeliveryResolver.atualizarStatus(args.id)
+        resolve(_, args) {
+            return DeliveryResolver.atualizarStatus(args.id)
         }
     }
 
