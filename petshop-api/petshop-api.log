@@ -1,0 +1,24 @@
+2021-09-07T17:28:25.800Z [petshop-api] info POST /proprietario - {"name":"Roger","phone":"325582"}
+2021-09-07T17:29:31.034Z [petshop-api] error GET  - relation "proprietario" does not exist
+2021-09-07T17:29:41.809Z [petshop-api] error GET  - relation "proprietario" does not exist
+2021-09-07T17:30:15.778Z [petshop-api] info GET /proprietarios
+2021-09-07T17:34:26.447Z [petshop-api] error PUT  - relation "proprietario" does not exist
+2021-09-07T17:34:36.745Z [petshop-api] error PUT  - could not determine data type of parameter $3
+2021-09-07T17:34:46.010Z [petshop-api] info PUT /proprietario - {"proprietario_id":7,"nome":"Roger ALTERADO","telefone":"325582"}
+2021-09-07T17:34:51.424Z [petshop-api] info GET /proprietarios
+2021-09-07T17:36:34.348Z [petshop-api] info DELETE /proprietario
+2021-09-07T17:36:39.609Z [petshop-api] info GET /proprietarios
+2021-09-07T17:41:21.145Z [petshop-api] error GET  - relation "proprietario" does not exist
+2021-09-07T17:41:31.117Z [petshop-api] info GET /proprietario
+2021-09-07T17:51:37.920Z [petshop-api] info GET /animals
+2021-09-07T17:53:38.116Z [petshop-api] error POST  - relation "animals" does not exist
+2021-09-07T17:53:57.475Z [petshop-api] info POST /animal - {"name":"floquinho","type":"turn can","proprietario_id":6}
+2021-09-07T17:54:23.029Z [petshop-api] info GET /animal
+2021-09-07T17:54:28.659Z [petshop-api] info GET /animal
+2021-09-07T17:59:06.265Z [petshop-api] info GET /animals
+2021-09-07T17:59:16.091Z [petshop-api] info DELETE /animal
+2021-09-07T17:59:18.850Z [petshop-api] info GET /animals
+2021-09-07T18:02:27.612Z [petshop-api] info POST /animal - {"name":"floquinho","type":"turn can","proprietario_id":6}
+2021-09-07T18:03:20.800Z [petshop-api] error PUT  - All data needed
+2021-09-07T18:03:38.346Z [petshop-api] error PUT  - All data needed
+2021-09-07T18:03:40.911Z [petshop-api] error PUT  - All data needed
