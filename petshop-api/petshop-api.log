@@ -31,3 +31,19 @@
 2021-09-07T18:16:42.958Z [petshop-api] error GET  - animalId is not defined
 2021-09-07T18:17:33.530Z [petshop-api] info GET /animals
 2021-09-07T18:17:51.306Z [petshop-api] info GET /animals
+2021-09-07T18:20:42.383Z [petshop-api] info GET /proprietarios
+2021-09-07T18:20:54.351Z [petshop-api] info GET /animals
+2021-09-07T18:21:02.482Z [petshop-api] info GET /animals
+2021-09-07T18:22:13.783Z [petshop-api] info GET /animals
+2021-09-07T18:22:43.870Z [petshop-api] info GET /animals
+2021-09-07T18:23:38.009Z [petshop-api] info POST /animal - {"name":"Totó","type":"Cachorro","proprietario_id":6}
+2021-09-07T18:23:50.510Z [petshop-api] info GET /animals
+2021-09-07T18:24:06.456Z [petshop-api] info GET /animals
+2021-09-07T18:24:27.224Z [petshop-api] info GET /proprietario
+2021-09-07T18:24:46.849Z [petshop-api] info GET /animals
+2021-09-07T18:25:03.689Z [petshop-api] info GET /animal
+2021-09-07T18:25:13.819Z [petshop-api] info GET /proprietario
+2021-09-07T18:26:17.300Z [petshop-api] info GET /animal
+2021-09-07T18:26:28.721Z [petshop-api] info GET /proprietario
+2021-09-07T18:26:48.035Z [petshop-api] info DELETE /animal
+2021-09-07T18:27:07.474Z [petshop-api] info GET /animals
