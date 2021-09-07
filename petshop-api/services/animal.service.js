@@ -4,7 +4,10 @@ async function createAnimal(animal){
     return await AnimalRepository.insertAnimal(animal);
 }
 
-async function getAnimals(){
+async function getAnimals(proprietarioId){
+    if(proprietarioId){
+        return await AnimalRepository.getAnimalsByProprietarioId(proprietarioId);
+    }
     return await AnimalRepository.getAnimals();
 }
 

@@ -19,7 +19,7 @@ async function createAnimal(req, res, next) {
 
 async function getAnimals(req, res, next){
     try{
-        res.send(await AnimalService.getAnimals());
+        res.send(await AnimalService.getAnimals(req.query.proprietario_id));
         logger.info(`GET /animals`);
     }catch(err){
        next(err); 

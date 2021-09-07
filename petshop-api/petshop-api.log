@@ -22,3 +22,12 @@
 2021-09-07T18:03:20.800Z [petshop-api] error PUT  - All data needed
 2021-09-07T18:03:38.346Z [petshop-api] error PUT  - All data needed
 2021-09-07T18:03:40.911Z [petshop-api] error PUT  - All data needed
+2021-09-07T18:04:33.685Z [petshop-api] info PUT /animal - {"animal_id":11,"nome":"caramelo","tipo":"turn can","proprietario_id":2}
+2021-09-07T18:04:39.445Z [petshop-api] info GET /animals
+2021-09-07T18:04:45.148Z [petshop-api] info DELETE /animal
+2021-09-07T18:04:48.329Z [petshop-api] info GET /animals
+2021-09-07T18:05:18.553Z [petshop-api] info GET /animal
+2021-09-07T18:15:18.516Z [petshop-api] error GET  - animalId is not defined
+2021-09-07T18:16:42.958Z [petshop-api] error GET  - animalId is not defined
+2021-09-07T18:17:33.530Z [petshop-api] info GET /animals
+2021-09-07T18:17:51.306Z [petshop-api] info GET /animals
