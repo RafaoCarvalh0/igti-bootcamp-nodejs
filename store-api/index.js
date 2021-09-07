@@ -31,7 +31,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/client", clientsRouter);
 app.use("/product", productRouter);
-app.use("/supply", supplyRouter);
+app.use("/supplier", supplyRouter);
 app.use("/sale", saleRouter);
 app.use((err, req, res, next)=>{
     logger.error(`${req.method} ${req.baseUrl} - ${err.message}`);

@@ -23,3 +23,89 @@ undefined [undefined] [object Object] undefined
 2021-09-06T18:33:01.910Z [store-api] info DELETE /client
 2021-09-06T18:33:05.583Z [store-api] info GET /clients
 2021-09-06T18:33:13.288Z [store-api] info PUT /client - {"client_id":3,"name":"vitoria alterada","cpf":"32132131","phone":"16991044787","email":"vitoria@vitoria.com","address":"rua x, nro 999"}
+2021-09-07T13:16:20.205Z [store-api] info GET /suppliers
+2021-09-07T13:18:24.287Z [store-api] error POST  - All data needed
+2021-09-07T13:20:02.998Z [store-api] info POST /supplier - {"name":"supplier","cnpj":"32132131","phone":"16991044787","email":"supplier@supplier.com","address":"rua x, nro 999"}
+2021-09-07T13:20:08.539Z [store-api] info POST /supplier - {"name":"supplier2","cnpj":"32132131","phone":"16991044787","email":"supplier@supplier.com","address":"rua x, nro 999"}
+2021-09-07T13:20:11.013Z [store-api] info POST /supplier - {"name":"supplier3","cnpj":"32132131","phone":"16991044787","email":"supplier@supplier.com","address":"rua x, nro 999"}
+2021-09-07T13:20:13.256Z [store-api] info POST /supplier - {"name":"supplier4","cnpj":"32132131","phone":"16991044787","email":"supplier@supplier.com","address":"rua x, nro 999"}
+2021-09-07T13:20:15.923Z [store-api] info POST /supplier - {"name":"supplier5","cnpj":"32132131","phone":"16991044787","email":"supplier@supplier.com","address":"rua x, nro 999"}
+2021-09-07T13:20:42.952Z [store-api] info GET /suppliers
+2021-09-07T13:21:31.292Z [store-api] error PUT  - All data needed
+2021-09-07T13:22:25.465Z [store-api] info PUT /supplier - {"supplier_id":3,"name":"supplier alterado","cnpj":"32132131","phone":"16991044787","email":"vitoria@vitoria.com","address":"rua x, nro 999"}
+2021-09-07T13:22:29.722Z [store-api] info GET /suppliers
+2021-09-07T13:22:55.475Z [store-api] info GET /supplier
+2021-09-07T13:23:29.083Z [store-api] info DELETE /supplier
+2021-09-07T13:23:33.149Z [store-api] info GET /suppliers
+2021-09-07T13:42:53.077Z [store-api] error POST  - ProductRepository.insertProduct is not a function
+2021-09-07T13:43:46.607Z [store-api] error POST  - insert or update on table "products" violates foreign key constraint "fk_suppliers"
+2021-09-07T13:43:55.614Z [store-api] error POST  - insert or update on table "products" violates foreign key constraint "fk_suppliers"
+2021-09-07T13:44:00.921Z [store-api] info POST /product - {"name":"product1","description":"description product1","value":2.29,"stock":8,"supplier_id":3}
+2021-09-07T13:45:33.933Z [store-api] info GET /products
+2021-09-07T13:45:47.820Z [store-api] info POST /product - {"name":"product2","description":"description product2","value":2.29,"stock":8,"supplier_id":4}
+2021-09-07T13:45:54.396Z [store-api] info GET /products
+2021-09-07T13:49:32.188Z [store-api] info GET /product
+2021-09-07T13:49:57.895Z [store-api] info GET /product
+2021-09-07T13:53:28.396Z [store-api] info PUT /product - {"product_id":3,"supplier_id":4,"name":"product alterado","description":"description product2","value":"2.29","stock":8}
+2021-09-07T13:53:33.588Z [store-api] info GET /products
+2021-09-07T13:53:54.452Z [store-api] info POST /supplier - {"name":"supplier6","cnpj":"32132131","phone":"16991044787","email":"supplier@supplier.com","address":"rua x, nro 999"}
+2021-09-07T13:53:56.917Z [store-api] info GET /suppliers
+2021-09-07T13:54:24.984Z [store-api] info PUT /product - {"product_id":3,"supplier_id":6,"name":"product alterado","description":"description product2","value":"30","stock":8}
+2021-09-07T13:54:42.176Z [store-api] info PUT /product - {"product_id":3,"supplier_id":6,"name":"product alterado","description":"description product2","value":"30","stock":8}
+2021-09-07T13:54:47.147Z [store-api] info PUT /product - {"product_id":3,"supplier_id":6,"name":"product alterado","description":"description product2","value":"30.3","stock":8}
+2021-09-07T13:55:13.800Z [store-api] info GET /products
+2021-09-07T13:55:24.287Z [store-api] info POST /product - {"name":"product3","description":"description product2","value":2.29,"stock":8,"supplier_id":5}
+2021-09-07T13:55:27.170Z [store-api] info GET /products
+2021-09-07T13:56:00.178Z [store-api] info DELETE /product
+2021-09-07T13:56:13.302Z [store-api] info GET /products
+2021-09-07T13:56:38.360Z [store-api] info DELETE /product
+2021-09-07T13:56:42.991Z [store-api] info GET /products
+2021-09-07T13:56:51.174Z [store-api] info DELETE /product
+2021-09-07T13:56:52.994Z [store-api] info GET /products
+2021-09-07T13:57:23.802Z [store-api] info POST /product - {"name":"product4","description":"description product2","value":2.29,"stock":8,"supplier_id":5}
+2021-09-07T13:57:25.866Z [store-api] info POST /product - {"name":"product5","description":"description product2","value":2.29,"stock":8,"supplier_id":5}
+2021-09-07T13:57:33.342Z [store-api] info POST /product - {"name":"product6","description":"description product2","value":2.29,"stock":8,"supplier_id":6}
+2021-09-07T13:57:42.031Z [store-api] info POST /product - {"name":"product7","description":"description product2","value":2.29,"stock":8,"supplier_id":3}
+2021-09-07T13:57:49.026Z [store-api] info POST /product - {"name":"product8","description":"description product2","value":2.29,"stock":8,"supplier_id":4}
+2021-09-07T13:57:53.710Z [store-api] info GET /products
+2021-09-07T14:12:05.616Z [store-api] info POST /client - {"name":"vitoria4","cpf":"32132131","phone":"16991044787","email":"vitoria@vitoria.com","address":"rua x, nro 999"}
+2021-09-07T14:12:07.664Z [store-api] info POST /client - {"name":"vitoria5","cpf":"32132131","phone":"16991044787","email":"vitoria@vitoria.com","address":"rua x, nro 999"}
+2021-09-07T14:12:09.745Z [store-api] info POST /client - {"name":"vitoria6","cpf":"32132131","phone":"16991044787","email":"vitoria@vitoria.com","address":"rua x, nro 999"}
+2021-09-07T14:12:12.145Z [store-api] info POST /client - {"name":"vitoria7","cpf":"32132131","phone":"16991044787","email":"vitoria@vitoria.com","address":"rua x, nro 999"}
+2021-09-07T14:12:16.753Z [store-api] info POST /client - {"name":"vitoria8","cpf":"32132131","phone":"16991044787","email":"vitoria@vitoria.com","address":"rua x, nro 999"}
+2021-09-07T14:12:41.672Z [store-api] info GET /clients
+2021-09-07T14:17:13.325Z [store-api] error POST  - syntax error at or near ")"
+2021-09-07T14:18:21.004Z [store-api] error POST  - syntax error at or near ")"
+2021-09-07T14:18:41.383Z [store-api] error POST  - syntax error at or near ")"
+2021-09-07T14:19:17.444Z [store-api] error POST  - syntax error at or near ")"
+2021-09-07T14:19:56.057Z [store-api] error POST  - syntax error at or near ")"
+2021-09-07T14:20:55.890Z [store-api] error POST  - syntax error at or near ")"
+2021-09-07T14:21:23.677Z [store-api] error POST  - syntax error at or near ")"
+2021-09-07T14:21:46.344Z [store-api] error POST  - syntax error at or near ")"
+2021-09-07T14:22:53.243Z [store-api] error POST  - time zone "gmt-0300" not recognized
+2021-09-07T14:23:11.346Z [store-api] error POST  - invalid input syntax for type date: "function Date() { [native code] }"
+2021-09-07T14:23:21.668Z [store-api] info POST /sale - {"value":7,"client_id":3,"product_id":5}
+2021-09-07T14:24:05.288Z [store-api] info POST /sale - {"value":89,"client_id":6,"product_id":7}
+2021-09-07T14:24:08.389Z [store-api] info POST /sale - {"value":89,"client_id":6,"product_id":7}
+2021-09-07T14:24:20.622Z [store-api] info POST /sale - {"value":61,"client_id":5,"product_id":6}
+2021-09-07T14:24:22.585Z [store-api] info POST /sale - {"value":61,"client_id":5,"product_id":6}
+2021-09-07T14:30:58.401Z [store-api] info GET /sales
+2021-09-07T14:31:23.555Z [store-api] info GET /sale
+2021-09-07T14:31:28.273Z [store-api] info GET /sale
+2021-09-07T14:31:40.086Z [store-api] info GET /sale
+2021-09-07T14:31:45.072Z [store-api] info GET /sale
+2021-09-07T14:32:04.766Z [store-api] info GET /sale
+2021-09-07T14:34:10.020Z [store-api] error PUT  - Unexpected string in JSON at position 16
+2021-09-07T14:34:13.934Z [store-api] error PUT  - All data needed
+2021-09-07T14:34:59.418Z [store-api] error PUT  - column "supplier_id" of relation "sales" does not exist
+2021-09-07T14:36:43.104Z [store-api] error PUT  - could not determine data type of parameter $4
+2021-09-07T14:36:53.774Z [store-api] error PUT  - multiple assignments to same column "client_id"
+2021-09-07T14:37:32.204Z [store-api] info PUT /sale - {"sale_id":1,"client_id":5,"product_id":6,"value":"7","date":"2021-09-07T03:00:00.000Z"}
+2021-09-07T14:38:39.607Z [store-api] info PUT /sale - {"sale_id":1,"client_id":5,"product_id":6,"value":"666","date":"2021-09-07T03:00:00.000Z"}
+2021-09-07T14:39:05.010Z [store-api] info GET /sales
+2021-09-07T14:39:11.675Z [store-api] info DELETE /sale
+2021-09-07T14:39:15.038Z [store-api] info GET /sales
+2021-09-07T14:54:00.869Z [store-api] info GET /product
+2021-09-07T14:54:13.421Z [store-api] error POST  - Cannot access 'sale' before initialization
+2021-09-07T14:56:37.709Z [store-api] info POST /sale - {"value":61,"client_id":5,"product_id":6}
+2021-09-07T14:57:13.506Z [store-api] info GET /product
