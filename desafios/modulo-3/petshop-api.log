@@ -1,0 +1,13 @@
+2021-09-14T14:47:03.655Z [petshop-api] error GET  - Cannot read property 'proprietario_id' of undefined
+2021-09-14T14:47:24.669Z [petshop-api] error GET  - getaddrinfo ENOTFOUND undefined
+2021-09-14T15:04:56.108Z [petshop-api] error GET  - getaddrinfo ENOTFOUND undefined
+2021-09-14T15:05:52.773Z [petshop-api] error GET  - getaddrinfo ENOTFOUND undefined
+2021-09-14T15:07:55.181Z [petshop-api] error GET  - getaddrinfo ENOTFOUND undefined
+2021-09-14T15:09:24.111Z [petshop-api] error GET  - connect ETIMEDOUT
+2021-09-14T15:09:24.122Z [petshop-api] error GET  - connect ETIMEDOUT
+2021-09-14T15:09:59.139Z [petshop-api] error GET  - getaddrinfo ENOTFOUND undefined
+2021-09-14T15:13:39.597Z [petshop-api] error GET  - Animais.finAll is not a function
+2021-09-14T15:13:57.722Z [petshop-api] error GET  - getaddrinfo ENOTFOUND undefined
+2021-09-14T16:10:43.984Z [petshop-api] error GET  - getaddrinfo ENOTFOUND undefined
+2021-09-14T17:02:09.271Z [petshop-api] error POST  - getaddrinfo ENOTFOUND undefined
+2021-09-14T17:04:18.823Z [petshop-api] error POST  - getaddrinfo ENOTFOUND undefined

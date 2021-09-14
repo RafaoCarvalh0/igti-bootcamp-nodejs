@@ -1,0 +1,184 @@
+2021-09-07T17:28:25.800Z [petshop-api] info POST /proprietario - {"name":"Roger","phone":"325582"}
+2021-09-07T17:29:31.034Z [petshop-api] error GET  - relation "proprietario" does not exist
+2021-09-07T17:29:41.809Z [petshop-api] error GET  - relation "proprietario" does not exist
+2021-09-07T17:30:15.778Z [petshop-api] info GET /proprietarios
+2021-09-07T17:34:26.447Z [petshop-api] error PUT  - relation "proprietario" does not exist
+2021-09-07T17:34:36.745Z [petshop-api] error PUT  - could not determine data type of parameter $3
+2021-09-07T17:34:46.010Z [petshop-api] info PUT /proprietario - {"proprietario_id":7,"nome":"Roger ALTERADO","telefone":"325582"}
+2021-09-07T17:34:51.424Z [petshop-api] info GET /proprietarios
+2021-09-07T17:36:34.348Z [petshop-api] info DELETE /proprietario
+2021-09-07T17:36:39.609Z [petshop-api] info GET /proprietarios
+2021-09-07T17:41:21.145Z [petshop-api] error GET  - relation "proprietario" does not exist
+2021-09-07T17:41:31.117Z [petshop-api] info GET /proprietario
+2021-09-07T17:51:37.920Z [petshop-api] info GET /animals
+2021-09-07T17:53:38.116Z [petshop-api] error POST  - relation "animals" does not exist
+2021-09-07T17:53:57.475Z [petshop-api] info POST /animal - {"name":"floquinho","type":"turn can","proprietario_id":6}
+2021-09-07T17:54:23.029Z [petshop-api] info GET /animal
+2021-09-07T17:54:28.659Z [petshop-api] info GET /animal
+2021-09-07T17:59:06.265Z [petshop-api] info GET /animals
+2021-09-07T17:59:16.091Z [petshop-api] info DELETE /animal
+2021-09-07T17:59:18.850Z [petshop-api] info GET /animals
+2021-09-07T18:02:27.612Z [petshop-api] info POST /animal - {"name":"floquinho","type":"turn can","proprietario_id":6}
+2021-09-07T18:03:20.800Z [petshop-api] error PUT  - All data needed
+2021-09-07T18:03:38.346Z [petshop-api] error PUT  - All data needed
+2021-09-07T18:03:40.911Z [petshop-api] error PUT  - All data needed
+2021-09-07T18:04:33.685Z [petshop-api] info PUT /animal - {"animal_id":11,"nome":"caramelo","tipo":"turn can","proprietario_id":2}
+2021-09-07T18:04:39.445Z [petshop-api] info GET /animals
+2021-09-07T18:04:45.148Z [petshop-api] info DELETE /animal
+2021-09-07T18:04:48.329Z [petshop-api] info GET /animals
+2021-09-07T18:05:18.553Z [petshop-api] info GET /animal
+2021-09-07T18:15:18.516Z [petshop-api] error GET  - animalId is not defined
+2021-09-07T18:16:42.958Z [petshop-api] error GET  - animalId is not defined
+2021-09-07T18:17:33.530Z [petshop-api] info GET /animals
+2021-09-07T18:17:51.306Z [petshop-api] info GET /animals
+2021-09-07T18:20:42.383Z [petshop-api] info GET /proprietarios
+2021-09-07T18:20:54.351Z [petshop-api] info GET /animals
+2021-09-07T18:21:02.482Z [petshop-api] info GET /animals
+2021-09-07T18:22:13.783Z [petshop-api] info GET /animals
+2021-09-07T18:22:43.870Z [petshop-api] info GET /animals
+2021-09-07T18:23:38.009Z [petshop-api] info POST /animal - {"name":"Totó","type":"Cachorro","proprietario_id":6}
+2021-09-07T18:23:50.510Z [petshop-api] info GET /animals
+2021-09-07T18:24:06.456Z [petshop-api] info GET /animals
+2021-09-07T18:24:27.224Z [petshop-api] info GET /proprietario
+2021-09-07T18:24:46.849Z [petshop-api] info GET /animals
+2021-09-07T18:25:03.689Z [petshop-api] info GET /animal
+2021-09-07T18:25:13.819Z [petshop-api] info GET /proprietario
+2021-09-07T18:26:17.300Z [petshop-api] info GET /animal
+2021-09-07T18:26:28.721Z [petshop-api] info GET /proprietario
+2021-09-07T18:26:48.035Z [petshop-api] info DELETE /animal
+2021-09-07T18:27:07.474Z [petshop-api] info GET /animals
+2021-09-14T14:38:40.973Z [petshop-api] error GET  - Access denied for user 'user_tester'@'localhost' (using password: YES)
+2021-09-14T14:39:10.656Z [petshop-api] error GET  - Access denied for user 'user_tester'@'localhost' (using password: YES)
+2021-09-14T14:39:41.475Z [petshop-api] error GET  - Access denied for user 'user_tester'@'localhost' (using password: YES)
+2021-09-14T14:39:48.913Z [petshop-api] error GET  - Unknown database 'desafio_modulo_3'
+2021-09-14T14:39:59.307Z [petshop-api] info GET /servicos
+2021-09-14T14:40:33.134Z [petshop-api] info GET /servicos
+2021-09-14T14:40:40.814Z [petshop-api] info GET /servicos
+2021-09-14T15:11:48.696Z [petshop-api] info GET /servicos
+2021-09-14T15:11:57.095Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:14:12.678Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:15:40.471Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:16:21.938Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:17:08.804Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:21:52.118Z [petshop-api] error GET  - animal_id is not defined
+2021-09-14T15:22:49.746Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:29:15.660Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:35:34.429Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:37:41.592Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:37:54.590Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:38:51.275Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:39:04.733Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:39:27.306Z [petshop-api] error GET  - Cannot read property 'animal_id' of undefined
+2021-09-14T15:40:02.601Z [petshop-api] error GET  - animal_id is not defined
+2021-09-14T15:41:23.640Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T15:50:38.036Z [petshop-api] error GET  - x is not defined
+2021-09-14T15:51:18.406Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:52:18.741Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:52:37.966Z [petshop-api] error GET  - x.parseInt is not a function
+2021-09-14T15:54:51.957Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:56:19.463Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:57:25.557Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:58:00.125Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:58:09.348Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:58:21.709Z [petshop-api] error GET  - Cannot read property 'animal_id' of undefined
+2021-09-14T15:58:30.474Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:58:52.237Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:59:01.535Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T15:59:23.492Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T16:00:13.609Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T16:00:47.047Z [petshop-api] error GET  - Cannot set headers after they are sent to the client
+2021-09-14T16:02:58.481Z [petshop-api] info GET /servicos
+2021-09-14T16:05:09.849Z [petshop-api] info GET /servicos
+2021-09-14T16:05:38.294Z [petshop-api] info GET /servicos
+2021-09-14T16:06:04.025Z [petshop-api] info GET /servicos
+2021-09-14T16:06:21.092Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T16:06:32.236Z [petshop-api] error GET  - Cannot read property 'dataValues' of undefined
+2021-09-14T16:07:00.030Z [petshop-api] error GET  - Cannot read property '0' of undefined
+2021-09-14T16:07:25.405Z [petshop-api] info GET /servicos
+2021-09-14T16:08:23.206Z [petshop-api] info GET /servicos
+2021-09-14T16:09:50.880Z [petshop-api] info GET /servicos
+2021-09-14T16:10:08.229Z [petshop-api] info GET /servicos
+2021-09-14T16:11:15.916Z [petshop-api] info GET /servicos
+2021-09-14T16:13:00.243Z [petshop-api] info GET /servicos
+2021-09-14T16:13:45.623Z [petshop-api] error GET  - animal is not defined
+2021-09-14T16:14:03.811Z [petshop-api] error GET  - Cannot read property '0' of undefined
+2021-09-14T16:14:15.718Z [petshop-api] error GET  - Cannot read property 'animal_id' of undefined
+2021-09-14T16:15:07.782Z [petshop-api] error GET  - Cannot read property 'animal_id' of undefined
+2021-09-14T16:15:17.470Z [petshop-api] info GET /servicos
+2021-09-14T16:16:00.651Z [petshop-api] info GET /servicos
+2021-09-14T16:19:25.699Z [petshop-api] error GET  - Animais.findAll(...).on is not a function
+2021-09-14T16:19:49.078Z [petshop-api] error GET  - Animais.findAll(...).on is not a function
+2021-09-14T16:21:50.400Z [petshop-api] error GET  - animals is not defined
+2021-09-14T16:22:20.340Z [petshop-api] error GET  - animals is not defined
+2021-09-14T16:24:12.433Z [petshop-api] error GET  - Unexpected token o in JSON at position 1
+2021-09-14T16:24:23.408Z [petshop-api] error GET  - animals is not defined
+2021-09-14T16:25:05.038Z [petshop-api] error GET  - Unexpected token o in JSON at position 1
+2021-09-14T16:44:13.015Z [petshop-api] error POST  - Field 'valor' doesn't have a default value
+2021-09-14T16:45:29.917Z [petshop-api] error POST  - Field 'valor' doesn't have a default value
+2021-09-14T16:46:04.043Z [petshop-api] error POST  - Field 'valor' doesn't have a default value
+2021-09-14T16:46:32.745Z [petshop-api] error POST  - Field 'animal_id' doesn't have a default value
+2021-09-14T16:47:02.464Z [petshop-api] error POST  - Cannot add or update a child row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T16:52:59.019Z [petshop-api] error POST  - Cannot add or update a child row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T17:00:19.853Z [petshop-api] error POST  - Cannot add or update a child row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T17:00:22.761Z [petshop-api] error POST  - Cannot add or update a child row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T17:00:34.871Z [petshop-api] error POST  - Cannot add or update a child row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T17:00:43.904Z [petshop-api] error POST  - Cannot add or update a child row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T17:11:43.716Z [petshop-api] error POST  - Cannot add or update a child row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T17:19:56.031Z [petshop-api] error POST  - Cannot add or update a child row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T17:20:38.113Z [petshop-api] info POST /servico - {"descricao":"servico teste","valor":10,"animal_id":2}
+2021-09-14T17:21:01.988Z [petshop-api] info POST /servico - {"descricao":"servico teste","valor":10.52,"animal_id":2}
+2021-09-14T17:43:59.261Z [petshop-api] info GET /proprietarios
+2021-09-14T17:44:16.243Z [petshop-api] error POST  - notNull Violation: proprietario.nome cannot be null,
+notNull Violation: proprietario.telefone cannot be null
+2021-09-14T17:44:26.686Z [petshop-api] error POST  - All data needed
+2021-09-14T17:44:45.263Z [petshop-api] error POST  - notNull Violation: proprietario.nome cannot be null,
+notNull Violation: proprietario.telefone cannot be null
+2021-09-14T17:45:09.285Z [petshop-api] info POST /proprietario - {"nome":"Roger","telefone":"325582"}
+2021-09-14T17:45:14.296Z [petshop-api] info POST /proprietario - {"nome":"Roger","telefone":"325582"}
+2021-09-14T17:45:48.136Z [petshop-api] error PUT  - All data needed
+2021-09-14T17:45:54.560Z [petshop-api] error PUT  - conn is not defined
+2021-09-14T17:46:21.035Z [petshop-api] info PUT /proprietario - undefined
+2021-09-14T17:46:37.441Z [petshop-api] info PUT /proprietario - [0]
+2021-09-14T17:46:47.975Z [petshop-api] info GET /proprietario
+2021-09-14T17:46:57.330Z [petshop-api] info DELETE /proprietario
+2021-09-14T17:47:06.585Z [petshop-api] info GET /proprietarios
+2021-09-14T17:49:04.087Z [petshop-api] error GET  - Animal.selectAll is not a function
+2021-09-14T17:49:15.549Z [petshop-api] info GET /animals
+2021-09-14T17:52:13.323Z [petshop-api] info GET /animals
+2021-09-14T17:52:23.071Z [petshop-api] info GET /animals
+2021-09-14T17:52:58.641Z [petshop-api] info GET /animal
+2021-09-14T17:53:02.117Z [petshop-api] info GET /animal
+2021-09-14T17:53:05.030Z [petshop-api] info GET /animal
+2021-09-14T17:53:08.535Z [petshop-api] info GET /animal
+2021-09-14T17:53:25.967Z [petshop-api] error PUT  - All data needed
+2021-09-14T17:53:45.946Z [petshop-api] info PUT /animal - [1]
+2021-09-14T17:53:56.742Z [petshop-api] info GET /animal
+2021-09-14T17:54:24.916Z [petshop-api] error DELETE  - Cannot delete or update a parent row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T17:54:52.898Z [petshop-api] error DELETE  - Cannot delete or update a parent row: a foreign key constraint fails (`desafio_modulo3`.`servicos`, CONSTRAINT `fk_animal_id` FOREIGN KEY (`animal_id`) REFERENCES `animal` (`animal_id`))
+2021-09-14T17:54:58.382Z [petshop-api] error POST  - All data needed
+2021-09-14T17:55:05.899Z [petshop-api] error POST  - notNull Violation: animal.proprietarioId cannot be null
+2021-09-14T17:55:13.430Z [petshop-api] error POST  - notNull Violation: animal.proprietarioId cannot be null
+2021-09-14T17:56:24.983Z [petshop-api] error POST  - notNull Violation: animal.proprietarioId cannot be null
+2021-09-14T18:00:27.945Z [petshop-api] error POST  - notNull Violation: animal.proprietarioId cannot be null
+2021-09-14T18:00:36.984Z [petshop-api] error POST  - All data needed
+2021-09-14T18:00:53.498Z [petshop-api] info POST /animal - {"nome":"Totó","tipo":"Cachorro","proprietarioId":2}
+2021-09-14T18:01:32.730Z [petshop-api] info GET /animal
+2021-09-14T18:01:55.923Z [petshop-api] info GET /animal
+2021-09-14T18:01:59.340Z [petshop-api] info GET /animal
+2021-09-14T22:35:18.760Z [petshop-api] info POST /post - {"titulo":"teste","conteudo":"teste conteudo"}
+2021-09-14T22:41:07.271Z [petshop-api] info POST /post - {"titulo":"teste","conteudo":"teste conteudo"}
+2021-09-14T22:44:48.515Z [petshop-api] info GET /posts
+2021-09-14T22:45:40.068Z [petshop-api] info GET /posts
+2021-09-14T22:45:43.013Z [petshop-api] info GET /posts
+2021-09-14T22:59:35.439Z [petshop-api] info POST /post - {"titulo":"teste2","conteudo":"teste conteudo2"}
+2021-09-14T23:00:07.217Z [petshop-api] info POST /post - {"titulo":"teste3","conteudo":"teste conteudo3"}
+2021-09-14T23:04:16.333Z [petshop-api] info GET /posts
+2021-09-14T23:06:56.391Z [petshop-api] error POST  - ComentarioService.createComentario is not a function
+2021-09-14T23:18:50.427Z [petshop-api] info POST /comentario - {"nome":"user","conteudo":"teste comentario"}
+2021-09-14T23:19:35.049Z [petshop-api] info GET /posts
+2021-09-14T23:20:02.182Z [petshop-api] info POST /comentario - {"nome":"user","conteudo":"teste comentario 2"}
+2021-09-14T23:20:19.947Z [petshop-api] info GET /posts
+2021-09-14T23:20:40.815Z [petshop-api] info POST /comentario - {"nome":"user 2","conteudo":"teste comentario 3"}
+2021-09-14T23:20:46.961Z [petshop-api] info GET /posts
+2021-09-14T23:29:40.228Z [petshop-api] info POST /servico - {"descricao":"Consulta","valor":200,"animal_id":5}
+2021-09-14T23:36:31.620Z [petshop-api] info GET /servico
